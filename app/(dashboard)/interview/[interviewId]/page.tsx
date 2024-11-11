@@ -8,14 +8,14 @@ import toast from 'react-hot-toast';
 import Webcam from "react-webcam";
 import WebCamAlert from './components/WebCamAlert';
 
-export default function Interview({ params }: { params: Promise<{ interviewId: string }> }) {
+function InterviewStart({ params }: { params: Promise<{ interviewId: string }> }) {
 
     const router = useRouter();
  
     const [userInterviewDetails, setUserInterviewDetails] = useState<InterviewUser | null>(null);
     
     const [loading, setLoading] = useState(true);
-    const [mockId, setmockId] = useState('');
+    const [mockId, setmockId] = useState("");
     const [webCamAlert, setWebCamAlert] = useState(false);
 
     const [isOpenWebcam, setIsOpenWebcam] = useState(false);
@@ -30,7 +30,6 @@ export default function Interview({ params }: { params: Promise<{ interviewId: s
                 method: "GET"
             });
             const data = await res.json()
-            
             if (data.success) {
                 setLoading(false)
                 setUserInterviewDetails(data?.userData[0])
@@ -53,7 +52,7 @@ export default function Interview({ params }: { params: Promise<{ interviewId: s
     return loading ? <Loader /> : (
         <div>
             <div className='max-sm:mx-4 flex flex-col items-center px-5'>
-                <p className='font-bold text-3xl text-center text-gray-950'>Let&apos;s Get Started</p>
+                <p className='font-bold text-3xl text-center text-gray-950'>Let's Get Started</p>
 
                 <div className='flex items-center gap-10 mt-7 justify-around max-lg:flex-col'>
                     <div className='flex flex-col gap-10 items-center lg:w-1/2'>
@@ -108,4 +107,5 @@ export default function Interview({ params }: { params: Promise<{ interviewId: s
     )
 }
 
+export default InterviewStart;
 export const dynamic = 'force-dynamic'
