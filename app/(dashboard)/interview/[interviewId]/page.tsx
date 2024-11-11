@@ -8,7 +8,7 @@ import toast from 'react-hot-toast';
 import Webcam from "react-webcam";
 import WebCamAlert from './components/WebCamAlert';
 
-function Interview({ params }: { params: Promise<{ interviewId: string }> }) {
+export default function Interview({ params }: { params: Promise<{ interviewId: string }> }) {
 
     const router = useRouter();
  
@@ -30,6 +30,7 @@ function Interview({ params }: { params: Promise<{ interviewId: string }> }) {
                 method: "GET"
             });
             const data = await res.json()
+            
             if (data.success) {
                 setLoading(false)
                 setUserInterviewDetails(data?.userData[0])
@@ -107,4 +108,4 @@ function Interview({ params }: { params: Promise<{ interviewId: string }> }) {
     )
 }
 
-export default Interview;
+export const dynamic = 'force-dynamic'

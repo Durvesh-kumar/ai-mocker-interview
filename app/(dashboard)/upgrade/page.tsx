@@ -93,4 +93,6 @@ function Upgrade() {
   )
 }
 
-export default Upgrade
+export default Upgrade;
+
+export const dynamic = 'force-dynamic'

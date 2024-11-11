@@ -7,7 +7,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export const POST = async (
   req: NextRequest,
-  { params }: { params: { interviewId: string } }
+  { params }: { params: Promise<{ interviewId: string }> }
 ) => {
   try {
     const mockId = (await params).interviewId;
@@ -24,7 +24,7 @@ export const POST = async (
     const user = await db
       .select()
       .from(MockerInterview)
-      .where(eq(MockerInterview.createdBy, clerkId));
+      .where(eq(MockerInterview.clerkId, clerkId));
 
     if (!user) {
       return NextResponse.json(

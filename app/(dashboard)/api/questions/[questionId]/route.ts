@@ -3,7 +3,7 @@ import { UserAnswer } from "@/lib/models/schema";
 import { desc, eq } from "drizzle-orm";
 import { NextRequest, NextResponse } from "next/server";
 
-export const GET = async(req:NextRequest, {params}:{params: {questionId: string}})=>{
+export const GET = async(req:NextRequest, {params}:{params: Promise<{questionId: string}>})=>{
     try {
 
         const clerkId = (await params).questionId;

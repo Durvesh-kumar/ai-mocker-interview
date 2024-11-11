@@ -25,4 +25,5 @@ const WebCamAlert:React.FC<WebCamAlertPropes> = ({setWebCamAlert, setIsOpenWebca
     )
 }
 
-export default WebCamAlert
+export default WebCamAlert;
+export const dynamic = 'force-dynamic'

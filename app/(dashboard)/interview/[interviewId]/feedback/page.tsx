@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 export default function Feedback({
   params,
 }: {
-  params: { interviewId: string };
+  params: Promise<{ interviewId: string }>;
 }) {
 
   const [loading, setLoading] = useState(true);
@@ -109,3 +109,5 @@ export default function Feedback({
     </div>
   );
 }
+
+export const dynamic = 'force-dynamic'
