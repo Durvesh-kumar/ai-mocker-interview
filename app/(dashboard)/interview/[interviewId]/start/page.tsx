@@ -7,7 +7,7 @@ import RecordAnswerSection from "./components/RecordAnswerSection";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-function StartInterview({ params }: { params: { interviewId: string } }) {
+function StartInterview({ params }: { params: Promise<{ interviewId: string }> }) {
   const [loading, setLoading] = useState(true);
 
   const [mockId, setmockId] = useState("");
@@ -96,3 +96,4 @@ function StartInterview({ params }: { params: { interviewId: string } }) {
 }
 
 export default StartInterview;
+export const dynamic = 'force-dynamic'

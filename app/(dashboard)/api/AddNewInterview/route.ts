@@ -55,3 +55,4 @@ export const POST = async (req: NextRequest) => {
         return NextResponse.json({ message: "Somthing went wrong! please try agian", error: true, success: false }, { status: 500 });
     }
 }
+export const dynamic = 'force-dynamic'

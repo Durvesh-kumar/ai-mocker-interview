@@ -20,3 +20,4 @@ export const GET = async(req:NextRequest,{params}:{params: Promise<{interviewId:
         return NextResponse.json({message: "Internal Server Error",  error:true, success:false}, {status: 500})
     }
 }
+export const dynamic = 'force-dynamic'

@@ -180,3 +180,4 @@ const RecordAnswerSection: React.FC<RecordAnswerSectionPropes> = ({
 };
 
 export default RecordAnswerSection;
+export const dynamic = 'force-dynamic'

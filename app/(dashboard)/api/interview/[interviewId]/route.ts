@@ -21,3 +21,4 @@ export const GET = async (req: NextRequest, { params }: { params: Promise<{ inte
         return NextResponse.json({ message: "Internal Sever Error", error: true, success: false }, { status: 500 });
     }
 };
+export const dynamic = 'force-dynamic'

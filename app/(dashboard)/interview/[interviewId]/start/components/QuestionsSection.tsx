@@ -1,7 +1,7 @@
 import { Lightbulb, Volume2 } from 'lucide-react';
 import React from 'react'
 interface QuestionsSectionPropes {
-    interviewrDatas : string | any;
+    interviewrDatas : any;
     setActiveQuestionIndex: (value: number) => void;
     activeQuestionIndex: number;
 }
@@ -47,3 +47,4 @@ const QuestionsSection: React.FC<QuestionsSectionPropes> = ({ interviewrDatas, s
 }
 
 export default QuestionsSection;
+export const dynamic = 'force-dynamic'

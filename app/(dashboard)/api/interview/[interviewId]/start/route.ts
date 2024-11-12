@@ -80,3 +80,4 @@ export const POST = async (
     );
   }
 };
+export const dynamic = 'force-dynamic'
