@@ -138,17 +138,18 @@ const RecordAnswerSection: React.FC<RecordAnswerSectionPropes> = ({
           alt="WebCam"
           className=" w-64 h-64 absolute mix-blend-multiply"
         />
+        <div className="my-5">
         <Webcam
           mirrored={true}
           style={{
             width: "100%",
             height: 300,
             zIndex: 10,
-            alignItems: "center",
-            placeItems: "center",
           }}
-          className=" block items-center justify-center my-4"
+          className=" block items-center justify-center"
         />
+        </div>
+        
       </div>
 
       <div className="mt-3">

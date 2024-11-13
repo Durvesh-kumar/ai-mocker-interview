@@ -63,7 +63,7 @@ function StartInterview({ params }: { params: Promise<{ interviewId: string }> }
             activeQuestionIndex={activeQuestionIndex}
           />
         </div>
-        <div className="w-1/2 max-md:w-full border rounded-lg shadow-sm p-5 shadow-orange-600">
+        <div className="w-1/2 max-md:w-full border rounded-lg shadow-sm p-5 shadow-orange-600 my-4">
           <RecordAnswerSection
             interviewrDatas={interviewrDatas}
             setActiveQuestionIndex={setActiveQuestionIndex}
