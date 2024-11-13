@@ -147,7 +147,7 @@ const RecordAnswerSection: React.FC<RecordAnswerSectionPropes> = ({
             alignItems: "center",
             placeItems: "center",
           }}
-          className=" block items-center justify-center"
+          className=" block items-center justify-center my-4"
         />
       </div>
 
